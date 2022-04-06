@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace LR2._9_bd_
 {
@@ -14,7 +13,6 @@ namespace LR2._9_bd_
         {
             Tasks = new HashSet<Task>();
         }
-        [Key]
         public int ID_Status { get; set; }
         public string Name_Status { get; set; }
 
