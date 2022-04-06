@@ -1,6 +1,8 @@
-﻿using LR2._9_bd_;
+﻿using System.Runtime.CompilerServices;
+using Microsoft.EntityFrameworkCore;
+using LR2._9_bd_;
 
-Context db = new Context();
+Context db = new();
 
 User user_1 = new()
 {
@@ -75,58 +77,60 @@ Status status3 = new()
 };
 db.Statuses.Add(status3);
 db.SaveChanges();
+
 Taskk task1 = new()
 {
     Name_Task = "Решите уравнение",
     Description_Task = "Нужно решить квадратное уравнение",
     Date_Pub = new DateTime(2020, 01, 10),
-    ID_Creator = 2,
-    ID_Acceptor = 1,
-    ID_Status = 2
+    CreatorID = 2,
+    //AcceptorID = 1,
+    Statusid = 2
 };
 db.Tasks.Add(task1);
 db.SaveChanges();
-Taskk task2 = new()
-{
-    Name_Task = "Решите задачку",
-    Description_Task = "Найдите сумму чисел",
-    Date_Pub = new DateTime(2021, 10, 20),
-    ID_Creator = 1,
-    ID_Acceptor = 2,
-    ID_Status = 2
-};
-db.Tasks.Add(task2);
-db.SaveChanges();
-Taskk task3 = new()
-{
-    Name_Task = "Решите задачу на c++",
-    Description_Task = "Нужно выполнить 10 задач по по строкам",
-    Date_Pub = new DateTime(2021, 03, 12),
-    ID_Creator = 2,
-    ID_Acceptor = 3,
-    ID_Status = 3
-};
-db.Tasks.Add(task3);
-db.SaveChanges();
-Taskk task4 = new()
-{
-    Name_Task = "Решите уравнение",
-    Description_Task = "Нужно решить кубическое уравнение",
-    Date_Pub = new DateTime(2022, 06, 19),
-    ID_Creator = 3,
-    ID_Acceptor = 2,
-    ID_Status = 5
-};
-db.Tasks.Add(task4);
-db.SaveChanges();
-Taskk task5 = new()
-{
-    Name_Task = "Решите неравенство",
-    Description_Task = "Нужно решить неравенство",
-    Date_Pub = new DateTime(2022, 11, 10),
-    ID_Creator = 4,
-    ID_Acceptor = 5,
-    ID_Status = 2
-};
-db.Tasks.Add(task5);
-db.SaveChanges();
+
+//Taskk task2 = new()
+//{
+//    Name_Task = "Решите задачку",
+//    Description_Task = "Найдите сумму чисел",
+//    Date_Pub = new DateTime(2021, 10, 20),
+//    CreatorID = 1,
+//    //AcceptorID = 2,
+//    Statusid = 2
+//};
+//db.Tasks.Add(task2);
+//db.SaveChanges();
+//Taskk task3 = new()
+//{
+//    Name_Task = "Решите задачу на c++",
+//    Description_Task = "Нужно выполнить 10 задач по по строкам",
+//    Date_Pub = new DateTime(2021, 03, 12),
+//    CreatorID = 2,
+//    //AcceptorID = 3,
+//    Statusid = 3
+//};
+//db.Tasks.Add(task3);
+//db.SaveChanges();
+//Taskk task4 = new()
+//{
+//    Name_Task = "Решите уравнение",
+//    Description_Task = "Нужно решить кубическое уравнение",
+//    Date_Pub = new DateTime(2022, 06, 19),
+//    CreatorID = 3,
+//    //AcceptorID = 2,
+//    Statusid = 5
+//};
+//db.Tasks.Add(task4);
+//db.SaveChanges();
+//Taskk task5 = new()
+//{
+//    Name_Task = "Решите неравенство",
+//    Description_Task = "Нужно решить неравенство",
+//    Date_Pub = new DateTime(2022, 11, 10),
+//    CreatorID = 4,
+//    //AcceptorID = 5,
+//    Statusid = 2
+//};
+//db.Tasks.Add(task5);
+//db.SaveChanges();

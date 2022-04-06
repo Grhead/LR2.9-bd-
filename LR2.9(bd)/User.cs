@@ -13,7 +13,7 @@ namespace LR2._9_bd_
         {
             Tasks = new HashSet<Taskk>();
         }
-        public int ID_User { get; set; }
+        public int Userid { get; set; }
         public string F_Name { get; set; }
         public string S_Name { get; set; }
         public string L_Name { get; set; }
