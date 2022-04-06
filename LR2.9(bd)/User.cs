@@ -11,7 +11,7 @@ namespace LR2._9_bd_
     {
         public User()
         {
-            Tasks = new HashSet<Task>();
+            Tasks = new HashSet<Taskk>();
         }
         public int ID_User { get; set; }
         public string F_Name { get; set; }
@@ -21,6 +21,6 @@ namespace LR2._9_bd_
         public string Password { get; set; }
         public long Number_Phone { get; set; }
 
-        public virtual ICollection<Task> Tasks { get; set; }
+        public virtual ICollection<Taskk> Tasks { get; set; }
     }
 }

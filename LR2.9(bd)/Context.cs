@@ -17,12 +17,12 @@ namespace LR2._9_bd_
         }
 
         public DbSet<Status> Statuses { get; set; }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<Taskk> Tasks { get; set; }
         public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().HasKey(u => u.ID_User);
-            modelBuilder.Entity<Task>().HasKey(u => u.ID_Task);
+            modelBuilder.Entity<Taskk>().HasKey(u => u.ID_Task);
             modelBuilder.Entity<Status>().HasKey(u => u.ID_Status);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

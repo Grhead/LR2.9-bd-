@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 namespace LR2._9_bd_
 {
-    public class Task
+    public class Taskk
     {
         public int ID_Task { get; set; }
         public string Name_Task { get; set; }
+        public string Description_Task { get; set; }
         public DateTime Date_Pub { get; set; }
         public int ID_Creator { get; set; }
         public int ID_Acceptor { get; set; }

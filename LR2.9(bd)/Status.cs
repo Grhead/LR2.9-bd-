@@ -11,12 +11,12 @@ namespace LR2._9_bd_
     {
         public Status()
         {
-            Tasks = new HashSet<Task>();
+            Tasks = new HashSet<Taskk>();
         }
         public int ID_Status { get; set; }
         public string Name_Status { get; set; }
 
-        public virtual ICollection<Task> Tasks { get; set; } = null!;
+        public virtual ICollection<Taskk> Tasks { get; set; } = null!;
 
         
     }
