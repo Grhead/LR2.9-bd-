@@ -12,7 +12,6 @@ namespace LR2._9_bd_
     {
         public Context()
         {
-            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
         public DbSet<Status> Statuses { get; set; }
@@ -29,17 +28,17 @@ namespace LR2._9_bd_
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=localdb;Trusted_Connection=True;");
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<User>()
-                        .HasMany(task => task.Tasks)
-                        .WithOne(con => con.Users);
-
-            modelBuilder.Entity<Taskk>()
-                        .HasMany(task => task.CreatorID)
-                        .HasForeignKey(con => con.Users);
-
-            base.OnModelCreating(modelBuilder);
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<User>()
+        //                .HasMany(task => task.Tasks)
+        //                .WithOne(con => con.Users);
+        //
+        //    modelBuilder.Entity<Taskk>()
+        //                .HasMany(task => task.CreatorID)
+        //                .HasForeignKey(con => con.Users);
+        //
+        //   base.OnModelCreating(modelBuilder);
         }
     }
 }
